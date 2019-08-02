@@ -11,12 +11,12 @@
     justify-content: center;
     flex-direction: column;
     z-index: 1;
-    .Close { 
-        position: absolute; top: 25px; right: 25px; 
+    .Close {
+        position: absolute; top: 25px; right: 25px;
         background: none;
         margin: 0;
         padding: 0px;
-        svg { fill: black; width: 36px; height: 36px; }
+        svg { fill: $base-font-color; width: 36px; height: 36px; }
     }
     .Contents {
         padding: $base-padding;

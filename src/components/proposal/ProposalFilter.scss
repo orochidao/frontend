@@ -2,7 +2,7 @@
 
 .ProposalFilter {
   width: 100%;
-  border-top: 2px solid #efefef;
+  border-top: 1px solid #2b3a60;
   &__Filters {
     max-width: 100%;
     overflow: auto;
@@ -13,17 +13,17 @@
       flex-direction: row;
       justify-content: space-around;
     }
-    button { 
+    button {
       display: inline;
-      min-width: auto; 
+      min-width: auto;
       margin: 0;
       background-color: transparent;
       color: #ccc;
       &:hover {
-        color: black;
+        color: $primary;
       }
       &.Active {
-        color: black;
+        color: $secondary;
       }
     }
   }

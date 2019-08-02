@@ -12,7 +12,7 @@
 }
 */
 
-body { 
+body {
   background-color: $app-background;
   color: $base-font-color;
   font-family: $base-font;
@@ -63,7 +63,7 @@ a {
     padding: 0px;
     vertical-align: middle;
     width: 24px;
-    height: 24px; 
+    height: 24px;
     margin-top: -3px;
     &.IconLeft {
       margin-right: 5px;
@@ -146,7 +146,7 @@ button,
 .ProposalCard,
 .MemberCard {
   padding: 25px;
-  border-top: 2px solid #eee;
+  border-top: 1px solid #2b3a60;
 }
 .ProposalDetail {
   padding: 25px;
@@ -215,6 +215,11 @@ button,
   padding-right: 15px;
 }
 
+.PadAlign {
+  padding-left: 30px;
+  padding-right: 15px;
+}
+
 .Row {
   display: flex;
   align-content: center;
@@ -249,7 +254,7 @@ button,
   .Form { max-width: 600px; width: 100%; }
 }
 
-.Truncate { 
+.Truncate {
   width: 65px;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -287,7 +292,7 @@ button,
     z-index: 10;
     transition: transform 150ms ease-out, font-size 150ms ease-out;
     z-index: -1;
-    
+
   }
   &.HasValue {
     label {
@@ -304,7 +309,7 @@ textarea {
   appearance: none;
   border: none;
   background-color: $app-light;
-  color: black;
+  color: $base-font-color;
   // Style
   border-bottom: 1px solid $base-font-color;
   width: 100%;

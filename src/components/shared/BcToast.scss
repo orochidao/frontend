@@ -13,7 +13,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        position: absolute;       
+        position: absolute;
         background-color: transparent;
         svg {
             fill: $secondary;
@@ -80,14 +80,14 @@
     margin: 0;
     padding: 6px;
     &__Inner {
-        width: 24px;
-        height: 24px;
+        width: 20px;
+        height: 20px;
         border-radius: 50%;
         background-color: $secondary;
         transition: all .15s linear;
     }
-    &:hover &__Inner { 
-        background-color: $secondary-hover; 
+    &:hover &__Inner {
+        background-color: $secondary-hover;
     }
 }
 

@@ -16,13 +16,13 @@
     position: absolute;
     right: 0px;
     top: 15px;
-    border: 2px solid $base-font-color;
-    border-radius: 15px;
+    border: 1px solid adjust-color($base-font-color, $alpha: -0.7);
+    border-radius: 3px;
     padding: 5px 15px;
     background-color: $app-light;
     transition: all .15s linear;
     z-index: 1;
-    font-weight: 900;
+    font-weight: 600;
     &__Button {
       border-radius: 0px;
       padding: 0px;
@@ -32,11 +32,12 @@
       transition: all .15s ease-in-out;
       background-color: transparent;
       color: $base-font-color;
-      width: 90px;
+      width: 120px;
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
       text-align: left;
+      font-weight: 600;
       svg {
         display: block;
         position: absolute;
@@ -45,13 +46,13 @@
         fill: $base-font-color;
       }
       &:hover {
-        color: $primary-hover;
-        svg { 
+        color: $bright  ;
+        svg {
           fill: $primary-hover;
         }
       }
     }
-  } 
+  }
 }
 
 .Dropdown {
@@ -67,6 +68,11 @@
     &--Item {
       margin: 25px 0px;
       display: block;
+      color: $base-font-color;
+      font-weight: 400;
+      &:hover {
+        color: $bright;
+      }
     }
   }
 }
