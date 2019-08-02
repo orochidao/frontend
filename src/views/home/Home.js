@@ -127,27 +127,27 @@ const Home = ({ client }) => {
                     >
                       <stop
                         offset="0%"
-                        stopColor="rgba(189,134,254,1)"
-                        stopOpacity={1}
+                        stopColor="#00e2f9"
+                        stopOpacity={.8}
                       />
                       <stop
                         offset="100%"
-                        stopColor="rgba(189,134,254,1)"
-                        stopOpacity={0}
+                        stopColor="rgba(217,98,219,1)"
+                        stopOpacity={.6}
                       />
                     </linearGradient>
                   </defs>
                   <Area
                     type="monotone"
                     dataKey="y"
-                    stroke="rgba(203,46,206,1)"
+                    stroke="rgba(0,254,165,1)"
                     fill="url(#grade)"
                   />
                 </AreaChart>
               </ResponsiveContainer>
             </div>
             <div className="HomeData">
-              <div 
+              <div
                   onClick={() => setChartView('bank')}
                   className={'Bank' + (chartView === 'bank' ? ' Selected' : '')}
                 >

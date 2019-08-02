@@ -18,11 +18,11 @@
     .MemberCard {
         background-color: $app-light;
         margin-top: 25px;
-        border-bottom: 2px solid $app-dark;
+        border-bottom: 1px solid $app-dark;
         transition: all .15s linear;
     }
     .MemberLink:hover .MemberCard {
-        background-color: $primary;
+        background-color: $secondary-dark;
         color: white;
         @media (min-width: $phone)
         { scale: 1.05; }

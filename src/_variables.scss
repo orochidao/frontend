@@ -1,24 +1,30 @@
-@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
 
 $base-font: 'Roboto', sans-serif;
-$data-font: 'Share Tech Mono', sans-serif;
+$data-font: 'Montserrat', sans-serif;
 $base-font-color: white;
 $base-padding: 15px;
-$brand: 'japanese-ogre.png';
+$brand: 'yang-ico.png';
 
 // Color Palette
-$app-background: #262425;
+$app-background: #0d1424;
 $app-light: lighten($app-background, 5%);
 $app-dark: darken($app-background, 5%);
-$primary: rgba(203,46,206,1);
-$secondary: rgba(47,233,167,1);
-$tertiary: rgba(239,73,123,1);
-$primary-hover: darken($primary, 10%);
-$secondary-hover: darken($secondary, 10%);
+
+$primary: #2fca8a;
+$secondary: #b562db;
+$tertiary: #d962db;
+
+$primary-hover: saturate($primary, 50%);
+$secondary-hover: lighten($secondary, 15%);
 $tertiary-hover: darken($tertiary, 10%);
+
+$primary-dark: adjust-color($primary, $alpha: -0.7);
+$secondary-dark: adjust-color($secondary, $alpha: -0.8);
+
 $danger: rgba(239,73,95,1);
-$bright: rgba(189,134,254,1);
+$bright: #78ffcf;
 
 //Media Queries
 $grid: 1200px;
@@ -66,7 +72,7 @@ $phone: 640px;
     left: 50%;
     transform: translateX(-50%);
     position: fixed;
-    background-color: $primary;
+    background-color: $primary-hover;
     color: white;
     width: 100%;
     height: 60px;
