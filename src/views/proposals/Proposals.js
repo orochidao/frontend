@@ -21,7 +21,7 @@ const Proposals = () => {
 
           return (
             <div className="View">
-              <div className="Row Pad">
+              <div className="Row PadAlign">
                 <h3>Proposals</h3>
                 {currentWallet.shares ? (
                   <div>
