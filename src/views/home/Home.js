@@ -154,7 +154,7 @@ const Home = ({ client }) => {
                 <h5>
                   Freedom Bank
                 </h5>
-                <h2 className="Data"><span class="Currency--Large"><IconDai /></span>{data.guildBankValue}</h2>
+                <h2 className="Data"><span className="Currency--Large"><IconDai /></span>{data.guildBankValue}</h2>
               </div>
               <div className="Row">
                 <div
@@ -173,7 +173,7 @@ const Home = ({ client }) => {
                   <h5>
                     Share Value
                   </h5>
-                  <h3 className="Data"><span class="Currency--Standard"><IconDai /></span>{data.shareValue.toFixed(4)}</h3>
+                  <h3 className="Data"><span className="Currency--Standard"><IconDai /></span>{data.shareValue.toFixed(4)}</h3>
                 </div>
               </div>
             </div>
