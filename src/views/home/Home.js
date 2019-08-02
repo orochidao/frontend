@@ -12,19 +12,19 @@ import Loading from '../../components/shared/Loading';
 import { GET_METADATA } from '../../utils/Queries';
 
 import './Home.scss';
-import WethService from '../../utils/WethService';
+import DaiService from '../../utils/DaiService';
+import IconDai from '../../components/shared/IconDai';
 
 const Home = ({ client }) => {
   const [vizData, setVizData] = useState([]);
   const [chartView, setChartView] = useState('bank');
 
-  // const weth = new WethService();
   const { guildBankAddr } = client.cache.readQuery({ query: GET_METADATA });
 
   useEffect(() => {
     const fetchData = async () => {
       const web3Service = new Web3Service();
-      const wethService = new WethService();
+      const daiService = new DaiService();
 
       const mcDao = new McDaoService();
 
@@ -42,7 +42,7 @@ const Home = ({ client }) => {
           const indexes = [];
           for (let x = 0; x <= blockIntervals; x++) {
             const atBlock = firstBlock + Math.floor(dataLength) * x;
-            balancePromises.push(wethService.balanceOf(guildBankAddr, atBlock));
+            balancePromises.push(daiService.balanceOf(guildBankAddr, atBlock));
             indexes.push(x);
           }
           const balanceData = await Promise.all(balancePromises);
@@ -80,7 +80,7 @@ const Home = ({ client }) => {
           for (let x = 0; x <= blockIntervals; x++) {
             const atBlock = firstBlock + Math.floor(dataLength) * x;
             sharePromises.push(mcDao.getTotalShares(atBlock));
-            balancePromises.push(wethService.balanceOf(guildBankAddr, atBlock));
+            balancePromises.push(daiService.balanceOf(guildBankAddr, atBlock));
             indexes.push(x);
           }
           const shareData = await Promise.all(sharePromises);
@@ -146,7 +146,7 @@ const Home = ({ client }) => {
                 </AreaChart>
               </ResponsiveContainer>
             </div>
-            <div className="Data">
+            <div className="HomeData">
               <div
                   onClick={() => setChartView('bank')}
                   className={'Bank' + (chartView === 'bank' ? ' Selected' : '')}
@@ -154,7 +154,7 @@ const Home = ({ client }) => {
                 <h5>
                   Freedom Bank
                 </h5>
-                <h2>Ξ {data.guildBankValue}</h2>
+                <h2 className="Data"><span class="Currency--Large"><IconDai /></span>{data.guildBankValue}</h2>
               </div>
               <div className="Row">
                 <div
@@ -164,7 +164,7 @@ const Home = ({ client }) => {
                   <h5>
                     Shares
                   </h5>
-                  <h3>{data.totalShares}</h3>
+                  <h3 className="Data">{data.totalShares}</h3>
                 </div>
                 <div
                   onClick={() => setChartView('value')}
@@ -173,7 +173,7 @@ const Home = ({ client }) => {
                   <h5>
                     Share Value
                   </h5>
-                  <h3>Ξ {data.shareValue.toFixed(4)}</h3>
+                  <h3 className="Data"><span class="Currency--Standard"><IconDai /></span>{data.shareValue.toFixed(4)}</h3>
                 </div>
               </div>
             </div>
