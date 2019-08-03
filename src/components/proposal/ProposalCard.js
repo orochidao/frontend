@@ -44,7 +44,7 @@ const ProposalCard = ({ proposal, client }) => {
         <div className="Tribute">
           <h5>Tribute</h5>
           <h2 className="Data">
-            <span class="Currency--Standard"><IconDai /></span>{web3Service.fromWei(proposal.tokenTribute)}
+            <span className="Currency--Standard"><IconDai /></span>{web3Service.fromWei(proposal.tokenTribute)}
           </h2>
         </div>
       </div>

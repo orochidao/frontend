@@ -35,7 +35,7 @@ const MemberCard = ({ member }) => {
           <div className="Tribute">
             <h5>Tribute</h5>
             <h2 className="Data">
-              <span class="Currency--Standard"><IconDai /></span>{web3Service.fromWei(member.tokenTribute)}
+              <span className="Currency--Standard"><IconDai /></span>{web3Service.fromWei(member.tokenTribute)}
             </h2>
           </div>
         </div>
