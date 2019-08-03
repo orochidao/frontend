@@ -7,9 +7,11 @@ import Header from './components/header/Header';
 import Loading from './components/shared/Loading';
 import McDaoService from './utils/McDaoService';
 import DaiService from './utils/DaiService';
+import Web3Service from './utils/Web3Service';
 
 const mcDao = new McDaoService();
 const dai = new DaiService();
+const web3 = new Web3Service();
 
 const App = ({ client }) => {
   const [loading, setloading] = useState(true);
@@ -24,6 +26,7 @@ const App = ({ client }) => {
       const votingPeriodLength = await mcDao.getVotingPeriodLength();
       const periodDuration = await mcDao.getPeriodDuration();
       const processingReward = await mcDao.getProcessingReward();
+      
       const proposalDeposit = await mcDao.getProposalDeposit();
       const guildBankValue = await dai.balanceOf(guildBankAddr);
 
@@ -35,8 +38,8 @@ const App = ({ client }) => {
           gracePeriodLength: gracePeriodLength.toNumber(),
           votingPeriodLength: votingPeriodLength.toNumber(),
           periodDuration: periodDuration.toNumber(),
-          processingReward: processingReward.toNumber(),
-          proposalDeposit: proposalDeposit.toNumber(),
+          processingReward: web3.fromWei(processingReward),
+          proposalDeposit: web3.fromWei(proposalDeposit),
           guildBankValue: guildBankValue.toNumber(),
           shareValue: guildBankValue / totalShares,
         },
