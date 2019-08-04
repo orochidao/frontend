@@ -65,13 +65,13 @@ const UserWallet = () => {
             <ConnectAccount />
 
             {currentWallet.state === 'Deployed' && (
-              <button onClick={() => toggle('allowanceForm')}>
+              <button onClick={() => toggle('daiAllowanceForm')}>
                 Approve DAI
               </button>
             )}
             <Modal
-              isShowing={isShowing.allowanceForm}
-              hide={() => toggle('allowanceForm')}
+              isShowing={isShowing.daiAllowanceForm}
+              hide={() => toggle('daiAllowanceForm')}
             >
               <ApproveDai />
             </Modal>

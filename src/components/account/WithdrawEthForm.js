@@ -84,7 +84,7 @@ const WithdrawEthForm = () => {
           resetForm();
           setLoading(false);
           setSubmitting(false);
-          toggle('ethWithdrawForm');
+          toggle('sendEth');
         }}
       >
         {({ isSubmitting }) => (

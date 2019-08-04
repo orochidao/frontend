@@ -108,8 +108,8 @@ const Store = ({ children }) => {
         acctAddr,
         daoService.contractAddr,
       );
-      const dai = daiRes.toNumber()
-      const allowance = allowanceRes.toNumber()
+      const dai = web3Service.fromWei(daiRes)
+      const allowance = web3Service.fromWei(allowanceRes)
 
       // get member shares of dao contract
       const member = await daoService.members(addrByBelegateKey);

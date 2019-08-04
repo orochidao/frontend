@@ -40,8 +40,8 @@ const App = ({ client }) => {
           periodDuration: periodDuration.toNumber(),
           processingReward: web3.fromWei(processingReward),
           proposalDeposit: web3.fromWei(proposalDeposit),
-          guildBankValue: guildBankValue.toNumber(),
-          shareValue: guildBankValue / totalShares,
+          guildBankValue: web3.fromWei(guildBankValue),
+          shareValue:  (guildBankValue / totalShares) / 1e18 ,
         },
       });
       setloading(false);
