@@ -93,7 +93,7 @@ const WithdrawDaiForm = () => {
           resetForm();
           setLoading(false);
           setSubmitting(false);
-          toggle('daiWithdrawForm');
+          toggle('sendDai');
         }}
       >
         {({ isSubmitting }) => (

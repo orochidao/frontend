@@ -53,7 +53,7 @@ const ApproveDai = () => {
             const data = await daiService.approve(
               values.addr,
               daoService.contractAddr,
-              values.amount,
+              web3Service.toWei(values.amount),
               true,
             );
 
@@ -91,7 +91,7 @@ const ApproveDai = () => {
           resetForm();
           setLoading(false);
           setSubmitting(false);
-          toggle('daiallowanceForm');
+          toggle('daiAllowanceForm');
         }}
       >
         {({ isSubmitting }) => (
