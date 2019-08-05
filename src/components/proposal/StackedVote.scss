@@ -11,12 +11,13 @@
         height: 5px;
         position: relative;
         .Labels {
+            width: 100%;
             .NoLabel {
                 width: 65px;
                 padding: 0px;
                 position: absolute;
                 top: -50px;
-                left: -62px;
+                right: -62px;
                 text-align: center;
                 background-color: transparent;
                 font-weight: 900;
@@ -28,7 +29,7 @@
                 padding: 0px;
                 position: absolute;
                 top: -50px;
-                right: -62px;
+                left: -62px;
                 text-align: center;
                 background-color: transparent;
                 font-weight: 900;

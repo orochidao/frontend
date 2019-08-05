@@ -34,11 +34,11 @@
     img { width: 36px; margin-top: 4px;  }
     &:nth-child(1) {
         bottom: 15px;
-        left: 15px;
+        right: 15px;
     }
     &:nth-child(3) {
         bottom: 15px;
-        right: 15px;
+        left: 15px;
     }
     &.Yes {
         border-color: $primary;
