@@ -11,7 +11,7 @@
             padding: 0px;
             position: absolute;
             top: -50px;
-            left: -62px;
+            right: -62px;
             text-align: center;
             background-color: transparent;
             font-weight: 900;
@@ -23,7 +23,7 @@
             padding: 0px;
             position: absolute;
             top: -50px;
-            right: -62px;
+            left: -62px;
             text-align: center;
             background-color: transparent;
             font-weight: 900;
@@ -71,15 +71,15 @@
         width: calc(100%)!important;
       }
       .YesLabel {
-        right: 0px !important;
-        top: -25px !important;
-        text-align: right;
-        width: auto !important;
-      }
-      .NoLabel {
         left: 0px !important;
         top: -25px !important;
         text-align: left;
+        width: auto !important;
+      }
+      .NoLabel {
+        right: 0px !important;
+        top: -25px !important;
+        text-align: right;
         width: auto !important;
       }
     }
