@@ -108,10 +108,10 @@ const ConnectAccount = () => {
             navigate there on the device/browser that is connected.
           </p>
           {qrCode && (
-            <>
+            <div className="QR">
               <QRCode value={qrCode} />
               <CopyToClipboard onCopy={onCopy} text={qrCode}>
-                <button className="Address">
+                <button className="Address" style={{margin: '25px auto'}}>
                   Copy Link
                   <svg
                     className="IconRight"
@@ -125,7 +125,7 @@ const ConnectAccount = () => {
                   </svg>
                 </button>
               </CopyToClipboard>
-            </>
+            </div>
           )}
         </div>
       </Modal>
