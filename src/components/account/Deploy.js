@@ -32,7 +32,7 @@ const Deploy = () => {
                   return false;
                 }
                 sdk
-                  .deployAccount()
+                  .deployAccount(estimated)
                   .then((data) => {
                     console.log('deployed', data);
                     bcprocessor.setTx(
