@@ -108,10 +108,9 @@ const Home = ({ client }) => {
         return (
           <div className="Home">
             <div className="Intro">
-              <h1>YangDAO</h1>
+              <h1>⛩️OrochiDAO🍶</h1>
               <p>
-                Securing the Collective Bag <br />
-                In the spirit of the One and Only
+                Party like AD 720
               </p>
             </div>
             <div className="Chart" style={{ width: '100%', height: '33vh' }}>
@@ -152,7 +151,7 @@ const Home = ({ client }) => {
                   className={'Bank' + (chartView === 'bank' ? ' Selected' : '')}
                 >
                 <h5>
-                  Freedom Bank
+                  Total sponsorship
                 </h5>
                 <h2 className="Data"><span className="Currency--Large"><IconDai /></span>{data.guildBankValue}</h2>
               </div>
